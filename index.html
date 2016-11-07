@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filmotecapp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+</head>
+<body class="container">
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo center">Filmotec<strong>app</strong><i class="material-icons left">theaters</i></a>
+        </div>
+    </nav>
+    <form class="card-panel">
+        <div class="row" >
+            <div class="col s6">
+                <div class="input-field col s12">
+                    <label for="pelicula">Pelicula</label>
+                    <input id="pelicula" type="text" required length="30">
+                </div>
+                <div class="input-field col s12">
+                    <label for="director">Director</label>
+                    <input id="director" type="text" required length="30">
+                </div>
+                <div class="input-field col s12">
+                    <label for="fecha">Año de Estreno</label>
+                    <input type="tel" id="fecha" required>
+                </div>
+                <div class="input-field col s12">
+                    <label>Imagen url</label>
+                    <input type="url" class="validate" id="url">
+                </div>
+                <div class="input-field col s12">
+                    <label>Trailer url</label>
+                    <input type="url" class="validate" id="trailer" required>
+                </div>
+                <a class="btn-floating btn-large waves-effect waves-light yellow" id="addImg"><i class="material-icons">picture_in_picture</i></a>
+            </div>
+            <div class="col s6">
+                <div class="card z-depth-2">
+                    <div class="card-image" id="agregarImg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="textarea">Sinopsis</label>
+                <textarea id="textarea" type="text" class="materialize-textarea" length="450" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 center" id="ocultar">
+                <button class="tooltipped btn-floating btn-large waves-effect waves-light blue" id="add" data-position="right" data-tooltip="Agregar nueva pelicula"><i class="material-icons">add</i></button>
+            </div>
+            <div class="col s6 center">
+                <button class="tooltipped btn-floating btn-large waves-effect waves-light blue" id="edit" data-position="right" data-tooltip="Editar pelicula" style="display:none;"><i class="material-icons">edit</i></button>
+            </div>
+            <div class="col s6 center">
+                <button id="close" type="reset" class="tooltipped btn-floating btn-large waves-effect waves-light red" data-position="right" data-tooltip="Cancelar"><i class="material-icons">close</i></button>
+            </div>
+        </div>
+    </form>
+    <div class="row" id="cardView"></div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
