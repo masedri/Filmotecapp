@@ -1,0 +1,22 @@
+{
+  "peliculas": [
+    {
+      "id": 0,
+      "titulo": "El club de la lucha",
+      "director": "David Fincher",
+      "sinopsis": "Un joven hastiado de su gris y monótona vida lucha contra el insomnio. En un viaje en avión conoce a un carismático vendedor de jabón que sostiene una teoría muy particular: el perfeccionismo es cosa de gentes débiles; sólo la autodestrucción hace que la vida merezca la pena. Ambos deciden entonces fundar un club secreto de lucha, donde poder descargar sus frustaciones y su ira, que tendrá un éxito arrollador.",
+      "fecha": "2009",
+      "url": "http://html.rincondelvago.com/00083457_html_m4cc7b07.jpg",
+      "trailer": "https://www.youtube.com/embed/r5KDiUNZv4w"
+    },
+    {
+      "titulo": "8 Millas",
+      "director": "Curtis Hanson",
+      "fecha": 2002,
+      "url": "https://moviesandseriesmega.files.wordpress.com/2015/05/8-mile-gallery-8.jpg?w=700&h=389",
+      "trailer": "https://www.youtube.com/embed/axGVrfwm9L4",
+      "sinopsis": "Jimmy Smith, alias \"Rabbit\", vive en un barrio pobre de Detroit donde predomina la población negra. Él es un chico blanco apasionado por el hip-hop. Tiene problemas con su novia, pasa apuros económicos y sus relaciones con su madre no son muy armoniosas. Su única válvula de escape es la música. Su vida es muy similar a la de Eminem, pues se trata de un joven rapero que descarga su rabia a través de la música.",
+      "id": 1
+    }
+  ]
+}
