@@ -61,7 +61,7 @@
 
     $.ajax({
 
-      url: "http://localhost:3000/peliculas",
+      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas.json",
 
       type: "GET",
 
@@ -77,29 +77,30 @@
   function terminado(json){
 
     console.log("Datos recibidos");
+    console.log(json);
 
-    for (var peliculas=0; peliculas < json.length; peliculas++){
-      var pelicula = json[peliculas];
-      var templateString =  `<ul class="col l4 m6 s12" id="`+json[peliculas].id+`">
+    for (var pelicula of json.peliculas){
+        console.log('dentro');
+      var templateString = `<ul class="col l4 m6 s12" id="`+pelicula.id+`">
       <div class="card sticky-action hoverable">
       <div class="card-image waves-effect waves-block waves-light">
-      <img id="urlSelect`+peliculas+`" class="activator" src="`+pelicula.url+`" height="250">
+      <img id="urlSelect`+pelicula.id+`" class="activator" src="`+pelicula.url+`" height="250">
       </div>
       <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4" id="titulo`+peliculas+`">`+pelicula.titulo+`</span><br>
-      <span id="directorSelect`+peliculas+`">`+pelicula.director+`</span>
-      <span id="fechaSelect`+peliculas+`">`+pelicula.fecha+`</span>
+      <span class="card-title activator grey-text text-darken-4" id="titulo`+pelicula.id+`">`+pelicula.titulo+`</span><br>
+      <span id="directorSelect`+pelicula.id+`">`+pelicula.director+`</span>
+      <span id="fechaSelect`+pelicula.id+`">`+pelicula.fecha+`</span>
       </div>
       <div class='card-action right-align'>
       <div class="left">
-      <a id="trailetSelect`+peliculas+`" href="`+pelicula.trailer+`?autoplay=1" target="_new"class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">play_arrow</i></a>
+      <a id="trailetSelect`+pelicula.id+`" href="`+pelicula.trailer+`?autoplay=1" target="_new"class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">play_arrow</i></a>
       </div>
       <a class="modificar btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
       <a class="eliminar btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
       </div>
       <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">`+pelicula.titulo+`<i class="material-icons right">close</i></span>
-      <p id="textareaSelect`+peliculas+`">`+pelicula.sinopsis+`</p>
+      <p id="textareaSelect`+pelicula.id+`">`+pelicula.sinopsis+`</p>
       <div class="video-container">
       <iframe src="`+pelicula.trailer+`" frameborder="0" allowfullscreen></iframe>
       </div><br>
@@ -152,6 +153,9 @@
   function error(xhr, status, strErr){
 
     console.log('Error al ejecutar');
+    console.log(xhr);
+    console.log(status);
+    console.log(strErr);
   }
 
   function addFilms(){
@@ -168,7 +172,7 @@
 
       data: array,
 
-      url: "http://localhost:3000/peliculas",
+      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas.json",
 
       type: "POST",
 
@@ -182,7 +186,7 @@
 
     $.ajax({
 
-      url:"http://localhost:3000/peliculas/"+id,
+      url:"https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas/"+id,
 
       type:"DELETE",
 
@@ -215,7 +219,7 @@
 
       data: array2,
 
-      url: "http://localhost:3000/peliculas/"+id,
+      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas/"+id,
 
       type: "PUT",
 
