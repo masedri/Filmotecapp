@@ -61,7 +61,7 @@
 
     $.ajax({
 
-      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas.json",
+      url: "../peliculas.json",
 
       type: "GET",
 
@@ -172,7 +172,7 @@
 
       data: array,
 
-      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas.json",
+      url: "../peliculas.json",
 
       type: "POST",
 
@@ -186,7 +186,7 @@
 
     $.ajax({
 
-      url:"https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas/"+id,
+      url:"../peliculas/"+id,
 
       type:"DELETE",
 
@@ -219,7 +219,7 @@
 
       data: array2,
 
-      url: "https://github.com/masedri/Filmotecapp/blob/gh-pages/peliculas/"+id,
+      url: "../peliculas/"+id,
 
       type: "PUT",
 
