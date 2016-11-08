@@ -61,7 +61,7 @@
 
     $.ajax({
 
-      url: "../peliculas.json",
+      url: "https://masedri.github.io/Filmotecapp/peliculas.json",
 
       type: "GET",
 
@@ -172,7 +172,7 @@
 
       data: array,
 
-      url: "../peliculas.json",
+      url: "https://masedri.github.io/Filmotecapp/peliculas.json",
 
       type: "POST",
 
@@ -186,7 +186,7 @@
 
     $.ajax({
 
-      url:"../peliculas/"+id,
+      url:"https://masedri.github.io/Filmotecapp/peliculas/"+id,
 
       type:"DELETE",
 
@@ -219,7 +219,7 @@
 
       data: array2,
 
-      url: "../peliculas/"+id,
+      url: "https://masedri.github.io/Filmotecapp/peliculas/"+id,
 
       type: "PUT",
 
