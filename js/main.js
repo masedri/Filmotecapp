@@ -61,7 +61,7 @@
 
     $.ajax({
 
-      url: "https://masedri.github.io/Filmotecapp/peliculas.json",
+      url: "http://localhost:3000/peliculas",
 
       type: "GET",
 
@@ -79,8 +79,9 @@
     console.log("Datos recibidos");
     console.log(json);
 
-    for (var pelicula of json.peliculas){
-        console.log('dentro');
+    for (var indice=0; indice < json.length; indice++){
+      console.log('dentro');
+      var pelicula = json[indice];
       var templateString = `<ul class="col l4 m6 s12" id="`+pelicula.id+`">
       <div class="card sticky-action hoverable">
       <div class="card-image waves-effect waves-block waves-light">
@@ -160,11 +161,11 @@
 
   function addFilms(){
 
-    let codigo = $('#trailer').val().substring(32);
+    var codigo = $('#trailer').val().substring(32);
 
-    let base = 'https://www.youtube.com/embed/'+codigo;
+    var base = 'https://www.youtube.com/embed/'+codigo;
 
-    let array = { titulo:$("#pelicula").val(),director:$("#director").val(),
+    var array = { titulo:$("#pelicula").val(),director:$("#director").val(),
     fecha:$("#fecha").val(),url:$('#url').val(),trailer:base,
     sinopsis:$("#textarea").val() };
 
@@ -172,7 +173,7 @@
 
       data: array,
 
-      url: "https://masedri.github.io/Filmotecapp/peliculas.json",
+      url: "http://localhost:3000/peliculas",
 
       type: "POST",
 
@@ -186,7 +187,7 @@
 
     $.ajax({
 
-      url:"https://masedri.github.io/Filmotecapp/peliculas/"+id,
+      url:"http://localhost:3000/peliculas/"+id,
 
       type:"DELETE",
 
@@ -207,11 +208,11 @@
 
   function modificarFilms(id){
 
-    let codigo2 = $('#trailer').val().substring(32);
+    var codigo2 = $('#trailer').val().substring(32);
 
-    let base2 = 'https://www.youtube.com/embed/'+codigo2;
+    var base2 = 'https://www.youtube.com/embed/'+codigo2;
 
-    let array2 = { titulo:$("#pelicula").val(),director:$("#director").val(),
+    var array2 = { titulo:$("#pelicula").val(),director:$("#director").val(),
     fecha:$("#fecha").val(),url:$('#url').val(),trailer:base2,
     sinopsis:$("#textarea").val() };
 
@@ -219,7 +220,7 @@
 
       data: array2,
 
-      url: "https://masedri.github.io/Filmotecapp/peliculas/"+id,
+      url: "http://localhost:3000/peliculas/"+id,
 
       type: "PUT",
 
